@@ -1,75 +1,184 @@
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <title>CSS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      #jb-container {
-        width: 940px;
-        margin: 10px auto;
-        padding: 20px;
-        border: 1px solid #bcbcbc;
-      }
-      #jb-header {
-        padding: 20px;
-        margin-bottom: 20px;
-        border: 1px solid #bcbcbc;
-      }
-      #jb-content {
-        width: 580px;
-        padding: 20px;
-        margin-bottom: 20px;
-        float: left;
-        border: 1px solid #bcbcbc;
-      }
-      #jb-sidebar {
-        width: 260px;
-        padding: 20px;
-        margin-bottom: 20px;
-        float: right;
-        border: 1px solid #bcbcbc;
-      }
-      #jb-footer {
-        clear: both;
-        padding: 20px;
-        border: 1px solid #bcbcbc;
-      }
-      @media ( max-width: 480px ) {
-        #jb-container {
-          width: auto;
-        }
-        #jb-content {
-          float: none;
-          width: auto;
-        }
-        #jb-sidebar {
-          float: none;
-          width: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="jb-container">
-      <div id="jb-header">
-        <h1>Responsive Layout</h1>
-      </div>
-      <div id="jb-content">
-        <h2>Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec mollis nulla. Phasellus lacinia tempus mauris eu laoreet. Proin gravida velit dictum dui consequat malesuada. Aenean et nibh eu purus scelerisque aliquet nec non justo. Aliquam vitae aliquet ipsum. Etiam condimentum varius purus ut ultricies. Mauris id odio pretium, sollicitudin sapien eget, adipiscing risus.</p>
-      </div>
-      <div id="jb-sidebar">
-        <h2>Sidebar</h2>
-        <ul>
-          <li>Lorem</li>
-          <li>Ipsum</li>
-          <li>Dolor</li>
-        </ul>
-      </div>
-      <div id="jb-footer">
-        <p>Copyright</p>
-      </div>
-    </div>
-  </body>
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<style>
+* {
+  box-sizing: border-box;
+}
+.box {
+  overflow:auto
+}
+.left {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.center {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.center img {
+  width:100%; height:auto;
+}
+.right {
+  background-color: PeachPuff;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* 태블릿 */
+  .center {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* 모바일 */
+  .left, .center, .right {
+    width: 100%;
+  }
+}
+  
+body {font-family:Verdana;margin:0px;}
+.header {
+	/* background:linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);  */
+	background-color:#e5dddd;
+	color:black; 
+	padding:15px;
+	height:400px;
+}
+.footer {background-color:silver; text-align:center; padding:10px; margin-top:7px; font-size:12px;}
+
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-menu > li {
+  float: left;
+  position: relative;
+}
+
+
+#main-menu > li > a {
+  font-size: 0.85rem;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: block;
+  padding: 14px 36px;
+  border-right: 1px solid rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+/* #main-menu > li:nth-child(1) > a {
+  border-left: 1px solid rgba(0,0,0,0.15);
+} */
+
+#sub-menu {
+  position: absolute;
+  background: #182952;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in;
+}
+
+#sub-menu > li {
+  padding: 16px 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+
+#sub-menu > li >  a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+}
+
+#main-menu > li:hover #sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+#sub-menu > li >  a:hover {
+ text-decoration: underline;
+}
+</style>
+</head>
+  
+<body>
+
+	<!--메뉴-->
+	<nav role="navigation">
+	  <ul id="main-menu">
+		<!-- <li><a href="#">MENU1</a></li> -->
+		<li><a href="#">MENU</a>
+		  <ul id="sub-menu">
+			<li><a href="#" aria-label="subemnu">Home</a></li>
+			<li><a href="#" aria-label="subemnu">Skills</a></li>
+			<li><a href="#" aria-label="subemnu">Project</a></li>
+			<li><a href="#" aria-label="subemnu">Contact</a></li>
+		  </ul>
+		</li>
+	  </ul>
+	</nav>
+
+	<div class="header">
+		<div>
+			<h1>Portfolio OHyeRi</h1>
+			<h3>안녕하세요🙌 웹 개발자입니다.</h3>
+		</div>
+	</div>
+
+	<div class="box">
+	  <div class="left">
+		<div class="menuitem">HTML</div>
+		<div class="menuitem">CSS</div>
+		<div class="menuitem">JS</div>
+		<div class="menuitem">JQUERY</div>
+	  </div>
+
+	  <div class="center">
+		<h2>홈페이지 제작</h2>
+		<p>HTML (뼈대) + CSS (디자인) + JS (기능)</p>
+		<img src="https://source.unsplash.com/random">
+	  </div>
+
+	  <div class="right">
+		<h2>HTML</h2>
+		<p>홈페이지 기본골격 (= 레이아웃)을 코딩.</p>
+		<h2>CSS</h2>
+		<p>골격을 보완하고, 디자인을 입힘.</p>
+		<h2>JS</h2>
+		<p>홈페이지에 역동적인 동작과 기능 추가</p>
+	  </div>
+	</div>
+
+	<div class="footer">
+		contact
+	</div>
+
+</body>
 </html>
