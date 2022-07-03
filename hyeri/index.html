@@ -1,184 +1,728 @@
+
 <!DOCTYPE html>
-<html lang='ko'>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-<style>
-* {
-  box-sizing: border-box;
-}
-.box {
-  overflow:auto
-}
-.left {
-  float: left;
-  width: 20%;
-}
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
-.center {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  overflow: hidden;
-}
-.center img {
-  width:100%; height:auto;
-}
-.right {
-  background-color: PeachPuff;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
-}
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>HyeRi portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Web Developer & Java Backend " />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-@media only screen and (max-width:800px) {
-  /* 태블릿 */
-  .center {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-@media only screen and (max-width:500px) {
-  /* 모바일 */
-  .left, .center, .right {
-    width: 100%;
-  }
-}
-  
-body {font-family:Verdana;margin:0px;}
-.header {
-	/* background:linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);  */
-	background-color:#e5dddd;
-	color:black; 
-	padding:15px;
-	height:400px;
-}
-.footer {background-color:silver; text-align:center; padding:10px; margin-top:7px; font-size:12px;}
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Trispace:wdth,wght@106,575&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			--primary-color: #0B0719;
+			--primary-hover-color: #44A4F2;
+			--color-1: #CF94D8;
+			--color-2: #CF94D8;
+			--color-3: #CF94D8;
+			--color-4: #CF94D8;
+			--color-5: #CF94D8;
+			--color-6: #CF94D8;
+		}
+	</style>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body oncontextmenu='return false'>
+		
+	<!-- 사이드바 -->
+	<div id="colorlib-page">
+		<div class="container-wrap">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url( images/hyeri.jpg)"></div>
+				<h1 id="colorlib-logo"><a href="#">HYERI O</a></h1>
+				<span class="position"><a href="#">Web Developer</a></span>
+			</div>
+			<nav id="colorlib-main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="skills">Skills</a></li>
+						<li><a href="#" data-nav-section="work">Project</a></li>
+						<li><a href="#" data-nav-section="experience">Career</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- <div class="colorlib-footer">
+				<ul>
+					<li><a href="https://github.com/hye2030" target="_blank">Github <i class="icon-github"></i></a></li>
+				</ul>
+			</div> -->
+
+		</aside>
+
+		<div id="colorlib-main">
+			<section id="colorlib-hero" class="js-fullheight mouse_effect" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+						<li style="background-image: url( images/back5.jpg);">
+							<div class="container-fluid">
+								<!-- <div class="row">
+									<div class="col-md-10 col-md-offset-7 col-md-pull-1 col-sm-20 col-xs-20 js-fullheight slider-text">
+										<div class="slider-text-inner js-fullheight">
+											<div class="desc"style='float: left;'>
+												<h1>Welcome <br> To my <br> Portfolio</h1>
+											</div>
+										</div>
+									</div>
+								</div> -->
+								<div class="row">
+									<div class="js-fullheight home_text" style="height:858px;">
+										 <h1 id="hello_text"></h1>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+			  	</div>
+			</section>
+
+			<!-- About -->	
+			<section class="colorlib-about" data-section="about">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">About Me</span>
+										<h2 class="colorlib-heading">"새로운 것을 좋아하는 웹 개발자 오혜리입니다!"</h2>
+										<p><strong></strong></p> 
+										<div class="w45_left mar_r20">
+											<p>저는 컴퓨터공학부를 진학하여 현재는 웹 개발을 위주로 하고 있습니다.<br> 백엔드를 주로 개발해 왔으며 관심사는 프론트엔드와 백엔드를 가리지 않고 있는 편입니다. 다양한 언어와 개발 환경에 대해 아직도 배울 점이 많지만, 그만큼 새로운 것을 알아간다는 것이 좋습니다.<br> 교내 프로젝트 및 회사 업무를 통해 쌓아온 경험에서 배운 책임감과 팀 간의 커뮤니케이션으로 웹을 개발합니다.</p>
+										</div>
+										<div class="w45_right mar_r20">
+											<p><strong>Name</strong> Hyeri O</p>
+											<p><strong>Age</strong> 27</p>
+											<p><strong>Address</strong> Busan, South Korea</p>
+											<p><strong>Email</strong> hye_2030@naver.com</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- <div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-code"></i></span>
+										<h3>Java</h3>
+									</div>
+									
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3>Server</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-monitor"></i></span>
+										<h3>Web</h3>
+									</div>
+							
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3>App</h3>
+									</div>
+								</div>
+							</div> -->
+							
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Tech skills -->	
+			<section class="colorlib-skills" data-section="skills">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">SKILLS</span>
+							<h2 class="colorlib-heading animate-box">MAJOR / SUB / Learning</h2>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="about-desc">
+							<div class="w30_left mar_r20">
+								<strong>MAJOR</strong>
+								<div>PHP</div>
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" aria-valuenow="80"
+									aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+									<span>80%</span>
+									</div>
+								</div>
+								<div>MYSQL</div>
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+									<span>60%</span>
+									</div>
+								</div>
+								<div>MSSQL</div>
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" aria-valuenow="60"
+									aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+									<span>60%</span>
+									</div>
+								</div>
+								<div>JavaScript</div>
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" aria-valuenow="50"
+									aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+									<span>50%</span>
+									</div>
+								</div>
+								<div>Jquery</div>
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" aria-valuenow="70"
+									aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+									<span>70%</span>
+									</div>
+								</div>
+							</div>
+							<div class="w30_left mar_r20">
+								<strong>SUB</strong>
+								<p class="skill_back">JAVA</p>
+								<p class="skill_back">ASP</p>
+								<p class="skill_back">HTML</p>
+								<p class="skill_back">CSS</p>
+								<p class="skill_back">Firebase</p>
+							</div>
+							<div class="w30_left mar_r20">
+								<strong>Learning</strong>
+								<p class="skill_back">AWS</p>
+								<p class="skill_back">Spring Framework</p>
+								<p class="skill_back">Github</p>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="row">
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="progress-wrap">
+									<h3><strong>JAVA</strong></h3>
+									<div class="progress">
+										<div class="progress-bar color-1" role="progressbar" aria-valuenow="80"
+										aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+										<span>80%</span>
+										</div>
+									</div>
+									JAVA 기초, 객제 지향 언어의 기본적인 문법에 대해 알고 있으며, 자료구조 및 알고리즘을 자바로 공부하였습니다.
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3><strong>Spring Framwork</strong></h3>
+									<div class="progress">
+										<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
+										aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+										<span>60%</span>
+										</div>
+									</div>
+									Spring 웹 프로젝트 경험으로 Spring framework의 전반적인 구조에 대해서 이해하고 있습니다.
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="progress-wrap">
+									<h3><strong>AWS</strong></h3>
+									<div class="progress">
+										<div class="progress-bar color-3" role="progressbar" aria-valuenow="20"
+										aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+										<span>20%</span>
+										</div>
+									</div>
+									AWS 서버에 tomcat을 사용하여 배포 및 서비스 한 경험이 있습니다.
+								</div>
+							</div>
+							<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+								<div class="progress-wrap">
+									<h3><strong>Github</strong></h3>
+									<div class="progress">
+										<div class="progress-bar color-4" role="progressbar" aria-valuenow="30"
+										aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+										<span>30%</span>
+										</div>
+									</div>
+									대부분의 프로젝트를 github를 통해 소스 코드를 관리하였으며, 협업 역시 github을 통해 진행하였습니다. 또한 github서버를 활용하여 블로그 및 포트폴리오 사이트를 관리합니다.
+								</div>
+							</div>
+						</div> -->
+				</div>
+			</section>
+
+			<!-- Project -->	
+			<section class="colorlib-work" data-section="work">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">PROJECT</span>
+							<h2 class="colorlib-heading animate-box">Career Project</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="http://opass.softplan.co/m/" target="_blank" class="blog-img">
+								<img src="images/oceanpass.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2021.07 ~ 2022.03</small></span>
+									<h3><a href="http://opass.softplan.co/m/" target="_blank">PHP, MySQL, JavaScript, JQuery</a></h3>
+									<p>요트 및 선박 정박을 위한 신규 웹사이트 구축 프로젝트(Mobile, Admin)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="https://www.edupang.com/" target="_blank" class="blog-img">
+								<img src="images/edupang.png" class="img-responsive" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2021.10 ~ 2022.01</small></span>
+									<h3><a href="https://www.edupang.com/" target="_blank">PHP, MySQL, JavaScript, JQuery</a></h3>
+									<p>NHN Cloud 서버 이전 및 유지보수(PC, Mobile, Admin)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="https://growingclass.com/" target="_blank" class="blog-img">
+								<img src="images/growing.png" class="img-responsive" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2021.05 ~ 2022.03</small></span>
+									<h3><a href="https://growingclass.com/" target="_blank">PHP, MySQL, JavaScript, JQuery</a></h3>
+									<p>아이들의 비대면 수업을 이용한 학습능력 분석 수치를 시각화 통계, 분석 알고리즘 구축 프로젝트(PC, Mobile, Admin 반응형)</p>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/spring.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="#" target="_blank" >Spring WEB site</a></h3>
+										<span>Spring Framework를 활용한 웹사이트 제작 프로젝트 입니다.</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="#" target="_blank" ><i class="icon-eye"></i> detail</a></span>
+											<span><a href="#" target="_blank"><i class="icon-file"></i> 구현 기능 상세보기</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+											
+						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="project" style="background-image: url(images/gitblog.png);">
+								<div class="desc">
+									<div class="con">
+										<h3><a href="#" target="_blank" >DEV githib blog</a></h3>
+										<span>깃 블로그를 직접 개발하여 배운 것들을 꾸준히 기록하며 배움을 나눕니다.</span>
+										<p class="icon">
+											<span><a href="#"><i class="icon-share3"></i></a></span>
+											<span><a href="https://hyesue-lee.github.io/" target="_blank" ><i class="icon-eye"></i> detail</a></span>
+											<span><a href="#" target="_blank"><i class="icon-file"></i> 구현 기능 상세보기</a></span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div> -->
+					</div>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="https://kimapass.org/" target="_blank" class="blog-img">
+								<img src="images/kimapass.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2021.03 ~ 2021.05</small></span>
+									<h3><a href="https://kimapass.org/" target="_blank">ASP, MsSQL, JavaScript, JQuery</a></h3>
+									<p>요트 예약 사이트 시스템 전체 리뉴얼 프로젝트(Mobile, Admin)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="http://lowcarbon.softplan.co/cms/login.php" target="_blank" class="blog-img">
+								<img src="images/lowcarbon.png" class="img-responsive" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2021.02 ~ 2021.03</small></span>
+									<h3><a href="http://lowcarbon.softplan.co/cms/login.php" target="_blank">PHP, MySQL, JavaScript, JQuery</a></h3>
+									<p>선박 LCLS 모니터링 시스템 구축(PC, Mobile)</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry" style="height: 450px;table-layout: fixed;display: table;">
+								<a href="https://homeupcorp.com/m" target="_blank" class="blog-img">
+								<img src="images/hometalk.png" class="img-responsive" style="max-width: 100%;max-height: 220px;display:block;margin:0px auto;"></a>
+								<div class="desc">
+									<span><small>2019.08 ~ 2020.05</small></span>
+									<h3><a href="https://homeupcorp.com/m" target="_blank">PHP, MySQL, JavaScript, JQuery</a></h3>
+									<p>공동주택 관련 복합적인 문제를 해결 하기 위한 모바일 플랫폼 구축(PC, Mobile, Admin)</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			
+			<!-- <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_bg_5.jpeg);" data-stellar-background-ratio="0.5">
+				<div class="overlay"></div>
+				<div class="colorlib-narrow-content">
+					<div class="row">
+					</div>
+					<div class="row">
+						
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="3000" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">Subscribers</span>
+							</div>
+			                        
+							<div class="col-md-3 text-center animate-box">
+								<span class="colorlib-counter js-counter" data-from="0" data-to="6" data-speed="5000" data-refresh-interval="50"></span>
+								<span class="colorlib-counter-label">project</span>
+							</div>
+			                        
+					</div>
+				</div>
+			</div> -->
+
+			<!-- Career -->				
+			<section class="colorlib-experience" data-section="experience">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">career</span>
+							<h2 class="colorlib-heading animate-box">summary</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft"> <!-- 왼쪽에서 -->	
+								<div class="timeline-entry-inner">
+									<div class="timeline-label">
+										<h4>웹 개발 <span>2019.01 ~ 2022.03</span></h4>
+										<p>
+										Linux, Window 서버세팅 <br>
+										HTML, CSS 유지보수 <br>
+										PHP, ASP 웹 개발 및 유지보수 <br>
+										MySQL, MSSQL 이용하여 백엔드 개발 <br>
+										안드로이드 JAVA 하이브리드 웹 개발 담당 <br>
+										안드로이드 JAVA 네이티브 유지보수 <br>
+										담당 클라이언트와 소통 및 기획 제시
+										</p>
+									</div>
+								</div>
+							</article>
+						 
+							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft"> <!-- 왼쪽에서 -->	
+								<div class="timeline-entry-inner">
+									<div class="timeline-label">
+										<h4>웹 개발<span>2018.09~2018.12</span></h4>
+										<p>
+										JAVA SpringFramework 기반의 웹 백엔드 개발 및 유지보수<br>
+										HTML, CSS 유지보수
+										</p>
+									</div>
+								</div>
+							</article>
+					   </div>
+				   </div>
+
+				   <!-- <div class="row">
+				   						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+				   							<h2 class="colorlib-heading animate-box" style="margin-top:4em;">Detail</h2>
+				   						</div>
+				   					</div>
+				   					<div class="row">
+				   						<div class="col-md-12">
+				   							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft"> 왼쪽에서	
+				   								<div class="timeline-entry-inner">
+				   									<div class="timeline-label">
+				   										<h4>웹 개발 <span>2019.01 ~ 2022.03</span></h4>
+				   										<p>
+				   										Linux, Window 서버세팅 <br>
+				   										HTML, CSS 유지보수 <br>
+				   										PHP, ASP 웹 개발 및 유지보수 <br>
+				   										MySQL, MSSQL 이용하여 백엔드 개발 <br>
+				   										안드로이드 JAVA 하이브리드 웹 개발 담당 <br>
+				   										안드로이드 JAVA 네이티브 유지보수 <br>
+				   										담당 클라이언트와 소통 및 기획 제시
+				   										</p>
+				   									</div>
+				   								</div>
+				   							</article>
+				   						 
+				   							<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft"> 왼쪽에서	
+				   								<div class="timeline-entry-inner">
+				   									<div class="timeline-label">
+				   										<h4>웹 개발<span>2018.09~2018.12</span></h4>
+				   										<p>
+				   										JAVA SpringFramework 기반의 웹 백엔드 개발 및 유지보수<br>
+				   										HTML, CSS 유지보수
+				   										</p>
+				   									</div>
+				   								</div>
+				   							</article>
+				   					   </div>
+				   </div> -->
+
+				</div>
+			</section>
+
+			
+			<!-- <section class="colorlib-blog" data-section="blog">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">self-improvement</span>
+							<h2 class="colorlib-heading">BLOG and YOUTUBE</h2>
+						</div>
+					</div>
+					<div class="row">
+						
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="blog-entry">
+									<a href="https://hyesue-lee.github.io/" target="_blank" class="blog-img"><img src="images/back1.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<span><small>since 2021.11 </small> | <small> 개발 블로그 운영</small> </span>
+										<h3><a href="https://hyesue-lee.github.io/" target="_blank">깃허브 블로그</a></h3>
+										<p>깃 블로그를 직접 개발하여 배운 것들을 꾸준히 기록하며 배움을 나눕니다.</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="blog-entry">
+									<a href="https://youtube.com/channel/UC6YIWKSsY_J7rMYfAb7_tOw" target="_blank" class="blog-img"><img src="images/youtube.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<span><small>since 2020.11 </small> | <small> 개발 컨텐츠 유튜브 채널 운영 [치얼스헤나]</small> </span>
+										<h3><a href="https://youtube.com/channel/UC6YIWKSsY_J7rMYfAb7_tOw" target="_blank">유튜브 개발채널</a></h3>
+										<p>유튜브 채널을 운영하며 같은 분야의 다양한 사람들과 소통하고 있습니다.</p>
+									</div>
+								</div>
+							</div>
+						
+							<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+								<div class="blog-entry">
+									<a href="https://cheershennah.tistory.com/" target="_blank" class="blog-img"><img src="images/ti.png" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+									<div class="desc">
+										<span><small>since 2018.03 </small> | <small> 이전 블로그</small> </span>
+										<h3><a href="https://cheershennah.tistory.com/" target="_blank">티스토리 블로그</a></h3>
+										<p>2018년부터 꾸준히 기록하였던 티스토리 첫 블로그 입니다.</p>
+									</div>
+								</div>
+							</div>
+						
+					</div>
+				</div>
+			</section> -->
+
+			<section class="colorlib-contact" data-section="contact">
+				<div class="colorlib-narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">CONTACT</span>
+							<h2 class="colorlib-heading">Contact Me</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="colorlib-icon"><a href="mailto:hye_2030@naver.com"><img src="images/mail.png" style="max-width: 100%; height: auto;"> </div></a>
+								<div class="colorlib-text">
+									<a href="mailto:hye_2030@naver.com">hye_2030@naver.com</a>
+								</div>
+							</div>
+						</div>
+						<!--
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form id="gform" method="POST" action="">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="성함" name="name">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="회신 받을 Email" name="email">
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="제목" name="title">
+										</div>
+										<div class="form-group">
+											<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="내용" ></textarea>
+										</div>
+										<div class="form-group">
+											<input type="button" onclick="mailSend();" class="btn btn-primary btn-send-message" value="Send Message">
+										</div>
+								
+										<div class="thankyou_message" style="display:none;" id="thankyou_message">
+											<h3><em>연락해주셔서 감사합니다.</em> 24시간이내에 회신드리도록 하겠습니다. :)</h3>
+										</div>
+									</form>
+								</div>
+								
+							</div>
+						</div>
+						-->
+					</div>
+				</div>
+				
+			</section>
 
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  position: relative;
-  background: linear-gradient(90deg, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-}
+		</div><!-- end:colorlib-main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:colorlib-page -->
 
-ul, li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- hyunew carousel -->
+	<script src="js/hyunew.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- mail -->
+	<script data-cfasync="false" type="text/javascript"
+	src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
-#main-menu > li {
-  float: left;
-  position: relative;
-}
+	<script type="text/javascript">
 
+        function createData() { 
+        var sendData = $('#gform').serialize(); 
+        return sendData;
+	     }
+	     function mailSend(){
+	      $.ajax({
+	         type : "POST",
+	         url : "https://script.google.com/macros/s/AKfycbz-frwBTGvIeei6eC125WczGVfQwFRHrCiw5veAUA/exec",
+	         data : createData(),
+	         datatype:"json",
+	         success : function(data, status, xhr){
+	            var input = confirm('연락주셔서 영광입니다. 24시간 이내에는 꼭 회신드리도록 하겠습니다! :)');
+	         },
+	         error : function(jqXHR, textStatus, errorThrown){
+	         	console.log("error")
+	         }
+	      });  
+	     }
 
-#main-menu > li > a {
-  font-size: 0.85rem;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  display: block;
-  padding: 14px 36px;
-  border-right: 1px solid rgba(0,0,0,0.15);
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-}
+		const content = "Hello, I'm Hyeri.\n Welcome\nTo my\nPortfolio.";
+		const text = document.querySelector("#hello_text");
+		let i = 0;
 
-/* #main-menu > li:nth-child(1) > a {
-  border-left: 1px solid rgba(0,0,0,0.15);
-} */
+		function typing(){
+			if (i < content.length) {
+			let txt = content.charAt(i);
+			txt = txt.replace(/\n/g, '<br/>');
+			text.innerHTML += txt;
+			i++;
+			}
+		}
+		setInterval(typing, 200);
 
-#sub-menu {
-  position: absolute;
-  background: #182952;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.15s ease-in;
-}
+		$(document).ready(function(){
+			
+			var mousePos = {};
+			
+			function getRandomInt(min, max) {
+				return Math.round(Math.random() * (max - min + 1)) + min;
+			}
 
-#sub-menu > li {
-  padding: 16px 28px;
-  border-bottom: 1px solid rgba(0,0,0,0.15);
-}
+			$(window).mousemove(function(e) {
+				mousePos.x = e.pageX;
+				mousePos.y = e.pageY;
+			});
+		  
+			$(window).mouseleave(function(e) {
+				mousePos.x = -1;
+				mousePos.y = -1;
+			});
+		  
+			var draw = setInterval(mouse_callback, 20);
 
-#sub-menu > li >  a {
-  color: rgba(255,255,255,0.6);
-  text-decoration: none;
-}
+			function mouse_callback() {
+				//if(mousePos.x > 0 && mousePos.y > 0){
+				if(mousePos.x > 0 && mousePos.y < $('.colorlib-about').offset().top){
+					if(mousePos.x > 0 && mousePos.y < $('.colorlib-about').offset().top){
+						$(".ball").css("z-index", 3);
+					}else{
+						$(".ball").css("z-index", 0);
+					}
 
-#main-menu > li:hover #sub-menu {
-  opacity: 1;
-  visibility: visible;
-}
+					var range = 15;
+					var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
+			  
+					var sizeInt = getRandomInt(10, 30);
+					size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+				  
+					var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
+				  
+					var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
 
-#sub-menu > li >  a:hover {
- text-decoration: underline;
-}
-</style>
-</head>
-  
-<body>
+					var style = left+top+color+size;
+					$("<div class='ball' style='" + style + "'></div>").appendTo('.mouse_effect').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
+				}
+			}
 
-	<!--메뉴-->
-	<nav role="navigation">
-	  <ul id="main-menu">
-		<!-- <li><a href="#">MENU1</a></li> -->
-		<li><a href="#">MENU</a>
-		  <ul id="sub-menu">
-			<li><a href="#" aria-label="subemnu">Home</a></li>
-			<li><a href="#" aria-label="subemnu">Skills</a></li>
-			<li><a href="#" aria-label="subemnu">Project</a></li>
-			<li><a href="#" aria-label="subemnu">Contact</a></li>
-		  </ul>
-		</li>
-	  </ul>
-	</nav>
+			var mql = window.matchMedia("screen and (max-width: 768px)");
 
-	<div class="header">
-		<div>
-			<h1>Portfolio OHyeRi</h1>
-			<h3>안녕하세요🙌 웹 개발자입니다.</h3>
-		</div>
-	</div>
+			mql.addListener(function(e) {
+				if(e.matches) {
+					clearInterval(draw);
+				} else {
+					//console.log('데스크탑 화면 입니다.');
+					draw = setInterval(mouse_callback, 20);
+				}
+			});
+		});
 
-	<div class="box">
-	  <!-- <div class="left">
-	  		<div class="menuitem">HTML</div>
-	  		<div class="menuitem">CSS</div>
-	  		<div class="menuitem">JS</div>
-	  		<div class="menuitem">JQUERY</div>
-	  </div> -->
+		/*$(function(){
+			$("html, body").animate({ scrollTop: 0 }, "slow"); 
+		});*/
+    </script>
+	
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
 
-	  <div class="center">
-		<h2>홈페이지 제작</h2>
-		<p>HTML (뼈대) + CSS (디자인) + JS (기능)</p>
-		<img src="https://source.unsplash.com/random">
-	  </div>
-
-	  <div class="right">
-		<h2>HTML</h2>
-		<p>홈페이지 기본골격 (= 레이아웃)을 코딩.</p>
-		<h2>CSS</h2>
-		<p>골격을 보완하고, 디자인을 입힘.</p>
-		<h2>JS</h2>
-		<p>홈페이지에 역동적인 동작과 기능 추가</p>
-	  </div>
-	</div>
-
-	<div class="footer">
-		Contact Me
-	</div>
-
-</body>
+	</body>
 </html>
